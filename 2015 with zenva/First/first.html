@@ -12,5 +12,29 @@
 name:{{sha.name}}<br>
 age:{{sha.age}} <button ng-click="younger()">make shahrokh younger!</button><br>
 location:{{sha.location}}<br>
+<hr>
+<div>you can modify name and location from here with 2 way data binding</div><br>
+<input type="text" ng-model="sha.name"/>
+<input type="text" ng-model="sha.age"/>
+<input type="text" ng-model="sha.location"/>
+<hr>
+<section>
+ people need foood !!!!<br>
+    this is some recipes!<br>
+    <table border="1px black solid">
+        <tr ng-repeat="item in items">
+            <td>
+                {{item.name}}
+            </td>
+
+            <td ng-repeat="ingredient in item.ingredients">
+              {{ingredient}}
+            </td>
+        </tr>
+    </table>
+
+
+
+</section>
 </body>
 </html>
