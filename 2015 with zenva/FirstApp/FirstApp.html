@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="payam">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../angular.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="FirstApp.js"></script>
+    <link href="../../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+</head>
+<body ng-controller="pctrl">
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <p>{{apptitle}}</p>
+            </a>
+        </div>
+    </div>
+</nav>
+<section ng-controller="ExpensesViewController">
+    <ul class="list-group">
+        <li ng-repeat="expense in expenses" class="list-group-item text-center"><span class="pull-left col-xs-3">{{expense.description | uppercase}}  </span>{{expense.amount}}<span><span class="pull-right"><button class="btn-success btn-group-sm pull-right">EDIT</button><button class="btn-danger btn-group-sm pull-right">DELETE</button></span></li>
+           </ul>
+</section>
+</body>
+</html>
