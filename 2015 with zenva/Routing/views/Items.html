@@ -1,5 +1,6 @@
 <section ng-controller="ExpensesViewController">
+    <button class="btn-success btn-group-lg col-lg-offset-5" ng-click="addnew()">add new</button>
     <ul class="list-group">
-        <li ng-repeat="expense in expenses" class="list-group-item text-center"><span class="pull-left col-xs-3">{{expense.description | uppercase}}  </span>{{expense.amount}}<span><span class="pull-right"><button class="btn-success btn-group-sm pull-right">EDIT</button><button class="btn-danger btn-group-sm pull-right">DELETE</button></span></li>
+        <li ng-repeat="expense in expenses" class="list-group-item text-center"><span class="pull-left col-xs-3">{{expense.description | uppercase}}  </span>{{expense.id}}<span><span class="pull-right"><button class="btn-success btn-group-sm pull-right">EDIT</button><button class="btn-danger btn-group-sm pull-right">DELETE</button></span></li>
     </ul>
 </section>
